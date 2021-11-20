@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Proyectaso</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_actividades">Actividades</string>
+    <string name="title_tienda">Tienda</string>
+    <string name="title_horario">Horario</string>
+    <string name="title_perfil">Perfil</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="valtvcorreo">Correo</string>
+    <string name="valetcorreo">Ingrese su correo electrónico</string>
+    <string name="valtvcontra">Contraseña</string>
+    <string name="valetcontra">Ingrese su contraseña</string>
+    <string name="valbtnlogin">Iniciar sesión</string>
+    <string name="valbtnregister">Registrarse</string>
+    <string name="valtvversion">v1.0.101</string>
+    <string name="valtvelige">Elige tu modalidad</string>
+    <string name="valtvescvol">Voluntario</string>
+    <string name="valtvescausp">Auspiciador</string>
+    <string name="valtvnombusu">Nombre de usuario:</string>
+    <string name="valtvnombcomp">Nombre completo:</string>
+    <string name="valtvcorreoelevol">Correo electrónico:</string>
+    <string name="valtvtelefonovol">Teléfono:</string>
+    <string name="tvcontravol">Contraseña:</string>
+    <string name="valcbtermcondvol">Acepta los términos y condiciones</string>
+    <string name="valbtnregistrarvol">Registrar</string>
+    <string name="valtvrazsoc">Razón Social</string>
+    <string name="valtvnombrepre">Nombre del Representante:</string>
+    <string name="valrbvol">Voluntario</string>
+    <string name="valrbausp">Auspiciador</string>
+    <string name="valtvcorreoeleausp">Correo electrónico</string>
+    <string name="valtvtelefonoausp">Teléfono:</string>
+    <string name="valtvcontraausp">Contraseña:</string>
+    <string name="valcbtermcondausp">Acepta los términos y condiciones</string>
+    <string name="valbtnregistrarausp">Registrar</string>
+    <string name="title_activity_main2">MainActivity2</string>
+</resources>

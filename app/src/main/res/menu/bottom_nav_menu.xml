@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navactividades"
+        android:icon="@drawable/list"
+        android:title="@string/title_actividades" />
+
+    <item
+        android:id="@+id/navtienda"
+        android:icon="@drawable/shop"
+        android:title="@string/title_tienda" />
+
+    <item
+        android:id="@+id/navhorario"
+        android:icon="@drawable/calendar"
+        android:title="@string/title_horario" />
+
+    <item
+        android:id="@+id/navperfil"
+        android:icon="@drawable/profile"
+        android:title="@string/title_perfil" />
+
+</menu>
