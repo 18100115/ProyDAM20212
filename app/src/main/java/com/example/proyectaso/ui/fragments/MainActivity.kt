@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         val tipo = intent.getStringExtra("param")
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        //Se valida el perfil
         if (tipo == "Voluntario"){
             val navView: BottomNavigationView = binding.navView
             val navController = findNavController(R.id.nav_host_fragment_activity_main)
