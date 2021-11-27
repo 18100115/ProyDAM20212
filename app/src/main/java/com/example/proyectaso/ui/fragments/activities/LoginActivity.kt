@@ -13,13 +13,13 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        //Luis e gei
 
         val etCorreo: EditText = findViewById(R.id.etCorreo)
         val etContra: EditText = findViewById(R.id.etContra)
         val btnLogin: Button = findViewById(R.id.btnLogin)
         val btnRegister: Button = findViewById(R.id.btnRegister)
         val rgTipo: RadioGroup = findViewById(R.id.rgTipo)
-
         btnLogin.setOnClickListener{
             var messageDetail = rgTipo.toString()
             this.sendMessage(messageDetail)
