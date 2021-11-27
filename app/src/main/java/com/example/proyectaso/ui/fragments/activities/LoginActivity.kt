@@ -19,7 +19,7 @@ class LoginActivity : AppCompatActivity() {
         val btnLogin: Button = findViewById(R.id.btnLogin)
         val btnRegister: Button = findViewById(R.id.btnRegister)
         val rgTipo: RadioGroup = findViewById(R.id.rgTipo)
-        "Luicito"
+        "GitHUb"
         btnLogin.setOnClickListener{
             var messageDetail = rgTipo.toString()
             this.sendMessage(messageDetail)
