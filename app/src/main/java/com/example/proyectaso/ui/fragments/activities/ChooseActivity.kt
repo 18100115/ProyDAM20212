@@ -14,7 +14,7 @@ class ChooseActivity : AppCompatActivity() {
         val ibEscVol: ImageButton = findViewById(R.id.ibEscVol)
         val ibEscAusp: ImageButton = findViewById(R.id.ibEscAusp)
         val ibRegresar1: ImageButton = findViewById(R.id.ibRegresar1)
-
+        //eri gei
         ibEscVol.setOnClickListener{
             val intent = Intent(this, RegisterVolActivity::class.java)
             startActivity(intent)
