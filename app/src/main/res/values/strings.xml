@@ -36,4 +36,6 @@
     <string name="valcbtermcondausp">Acepta los términos y condiciones</string>
     <string name="valbtnregistrarausp">Registrar</string>
     <string name="title_activity_main2">MainActivity2</string>
+    <string name="val_titutlo">Actividades</string>
+    <string name="val_agregar">+</string>
 </resources>
