@@ -3,12 +3,20 @@ package com.example.proyectaso.ui.fragments.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.*
 import com.example.proyectaso.R
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
 import java.util.*
+import android.app.Activity
+import android.content.ContentValues.TAG
+import com.google.firebase.auth.FirebaseUser
 
 class RegisterAuspActivity : AppCompatActivity() {
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +33,7 @@ class RegisterAuspActivity : AppCompatActivity() {
 
         val db = FirebaseFirestore.getInstance()
 
+        auth = Firebase.auth
 
 
         btnRegistrarAusp.setOnClickListener{
@@ -38,6 +47,23 @@ class RegisterAuspActivity : AppCompatActivity() {
             val nuevoauspiciador = auspiciador(razonSoc,nombreAusp,correoAusp,telefAusp,contraAusp)
 
             val id: UUID = UUID.randomUUID()
+
+            auth.createUserWithEmailAndPassword(correoAusp, contraAusp)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        // Sign in success, update UI with the signed-in user's information
+
+                        Log.d(TAG, "createUserWithEmail:success")
+                        val user = auth.currentUser
+                        updateUI(user)
+                    } else {
+                        // If sign in fails, display a message to the user.
+                        Log.w(TAG, "createUserWithEmail:failure", task.exception)
+                        Toast.makeText(baseContext, "Authentication failed.",
+                            Toast.LENGTH_SHORT).show()
+                        updateUI(null)
+                    }
+                }
 
             db.collection("auspiciador") //auspiciador es el nombre del campo en firebase
                 .document(id.toString())
@@ -66,3 +92,7 @@ data class auspiciador(
     val Telefono: String,
     val RazonSocial: String,
     val Correo: String)
+
+private fun updateUI(user: FirebaseUser?) {
+
+}
