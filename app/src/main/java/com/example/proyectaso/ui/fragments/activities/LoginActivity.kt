@@ -27,18 +27,25 @@ class LoginActivity : AppCompatActivity() {
             var correo: String = etCorreo.text.toString()
             var clave: String = etContra.text.toString()
 
-            db.signInWithEmailAndPassword(correo, clave)
-                .addOnCompleteListener(this) { task ->
-                    if (task.isSuccessful) {
-                        Toast.makeText(this, "Inicio Satisfactorio", Toast.LENGTH_LONG).show()
-                        val intent = Intent(this, MainActivity::class.java)
-                        startActivity(intent)
-                    } else {
-                        Toast.makeText(this, "El correo y/o clave es incorrecto", Toast.LENGTH_LONG).show()
+            if (correo.isNotEmpty()&&clave.isNotEmpty()) {
+                db.signInWithEmailAndPassword(correo, clave)
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
+                            Toast.makeText(this, "Inicio Satisfactorio", Toast.LENGTH_LONG).show()
+                            val intent = Intent(this, MainActivity::class.java)
+                            startActivity(intent)
+                        } else {
+                            Toast.makeText(
+                                this,
+                                "El correo y/o clave es incorrecto",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
+
                     }
-
-                }
-
+            }else{
+                Toast.makeText(this,"Ingrese los campos",Toast.LENGTH_LONG).show()
+            }
             btnRegister.setOnClickListener {
                 val intent = Intent(this, ChooseActivity::class.java)
                 startActivity(intent)
