@@ -1,11 +1,13 @@
 package com.example.proyectaso.ui.fragments
 
+
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.proyectaso.R
+
 
 class TiendaFragment : Fragment() {
 
@@ -16,5 +18,10 @@ class TiendaFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_tienda, container, false)
     }
+
+    private fun setupRecyclerView(){
+        //rvTienda.layou
+    }
+
 
 }
