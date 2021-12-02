@@ -8,14 +8,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.proyectaso.R
-import com.example.proyectaso.ui.fragments.model.Tienda
+import com.example.proyectaso.ui.fragments.model.Producto
 
-class TiendaAdapter (private var lstProductos: List<Tienda>)
+class TiendaAdapter (private var lstProductos: List<Producto>)
     :RecyclerView.Adapter<TiendaAdapter.ViewHolder>(){
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val ivProducto: ImageView = itemView.findViewById(R.id.ivProducto)
         val tvProducto: TextView = itemView.findViewById(R.id.tvProducto)
-        val btnProducto: Button = itemView.findViewById(R.id.btnProducto)
+        val tvBtn: TextView = itemView.findViewById(R.id.tvBtn)
     }
 
 
@@ -27,11 +27,12 @@ class TiendaAdapter (private var lstProductos: List<Tienda>)
     override fun onBindViewHolder(holder: TiendaAdapter.ViewHolder, position: Int) {
         val itemProducto = lstProductos[position]
         holder.tvProducto.text = itemProducto.producto
-        holder.btnProducto.text = itemProducto.btncomprar.toString()
+        holder.tvBtn.text = itemProducto.boton
         holder.ivProducto.setImageResource(itemProducto.image)
     }
 
     override fun getItemCount(): Int {
         return lstProductos.size
+
     }
 }
