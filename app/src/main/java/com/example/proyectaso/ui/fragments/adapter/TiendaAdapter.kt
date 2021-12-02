@@ -33,5 +33,6 @@ class TiendaAdapter (private var lstProductos: List<Producto>)
 
     override fun getItemCount(): Int {
         return lstProductos.size
+
     }
 }
