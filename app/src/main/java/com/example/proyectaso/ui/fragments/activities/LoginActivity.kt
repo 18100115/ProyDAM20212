@@ -6,8 +6,10 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.RadioGroup
+import android.widget.Toast
 import com.example.proyectaso.R
 import com.example.proyectaso.ui.fragments.MainActivity
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,25 +21,30 @@ class LoginActivity : AppCompatActivity() {
         val btnLogin: Button = findViewById(R.id.btnLogin)
         val btnRegister: Button = findViewById(R.id.btnRegister)
         val rgTipo: RadioGroup = findViewById(R.id.rgTipo)
+        val db = FirebaseAuth.getInstance()
 
-        btnLogin.setOnClickListener{
-            var messageDetail = rgTipo.toString()
-            this.sendMessage(messageDetail)
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+        btnLogin.setOnClickListener {
+            var correo: String = etCorreo.text.toString()
+            var clave: String = etContra.text.toString()
+
+            db.signInWithEmailAndPassword(correo, clave)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        Toast.makeText(this, "Inicio Satisfactorio", Toast.LENGTH_LONG).show()
+                        val intent = Intent(this, MainActivity::class.java)
+                        startActivity(intent)
+                    } else {
+                        Toast.makeText(this, "El correo y/o clave es incorrecto", Toast.LENGTH_LONG).show()
+                    }
+
+                }
+
+            btnRegister.setOnClickListener {
+                val intent = Intent(this, ChooseActivity::class.java)
+                startActivity(intent)
+            }
+
         }
-
-        btnRegister.setOnClickListener{
-            val intent = Intent(this, ChooseActivity::class.java)
-            startActivity(intent)
-        }
-
     }
 
-    private fun sendMessage(message: String)
-    {
-        val intent = Intent(this, MainActivity::class.java)
-        intent.putExtra("param", message)
-        startActivity(intent)
-    }
 }
