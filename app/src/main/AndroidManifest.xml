@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyectaso">
         <activity
+            android:name=".ui.fragments.activities.Registro_NA_Activity"
+            android:exported="true" />
+        <activity
             android:name=".ui.fragments.activities.Reguistro_NA_Activity"
             android:exported="true" />
         <activity
