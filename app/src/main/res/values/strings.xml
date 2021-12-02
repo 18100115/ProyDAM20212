@@ -98,6 +98,13 @@
 
 
 
+    <string name="val_Actividad">Nueva Actividad:</string>
+    <string name="val_nevent">Nombre Evento:</string>
+    <string name="val_des">Descripcion:</string>
+    <string name="val_Ubi">Ubicacion:</string>
+    <string name="val_nvol">N° Voluntarios:</string>
+    <string name="val_Reco">Recompensa:</string>
+    <string name="val_fechah">Fecha:</string>
 
 
 
