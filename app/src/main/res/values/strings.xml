@@ -36,7 +36,4 @@
     <string name="valcbtermcondausp">Acepta los términos y condiciones</string>
     <string name="valbtnregistrarausp">Registrar</string>
     <string name="title_activity_main2">MainActivity2</string>
-    <string name="valtvtitulotienda">Tienda</string>
-    <string name="valtvcanjea">¡Canjea tus monedas!</string>
-    <string name="valtvmoneda">500</string>
 </resources>

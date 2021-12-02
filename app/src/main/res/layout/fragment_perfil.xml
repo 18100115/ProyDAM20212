@@ -8,7 +8,7 @@
     tools:context=".ui.fragments.PerfilFragment">
 
     <ImageView
-        android:id="@+id/ivProducto"
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="140dp"
@@ -56,8 +56,8 @@
         android:layout_marginTop="48dp"
         android:text="TextView"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/ivProducto"
-        app:layout_constraintTop_toBottomOf="@+id/ivProducto" />
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/tvNombrePerfil"
@@ -82,7 +82,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvN" />
 
     <Button
-        android:id="@+id/btnProducto"
+        android:id="@+id/btnPerfilEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="89dp"

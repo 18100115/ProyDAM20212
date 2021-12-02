@@ -24,14 +24,4 @@
         android:name="com.example.proyectaso.ui.fragments.TiendaFragment"
         android:label="fragment_tienda"
         tools:layout="@layout/fragment_tienda" />
-    <fragment
-        android:id="@+id/navperfil2"
-        android:name="com.example.proyectaso.ui.fragments.Perfil2Fragment"
-        android:label="fragment_perfil2"
-        tools:layout="@layout/fragment_perfil2" />
-    <fragment
-        android:id="@+id/navactividades2"
-        android:name="com.example.proyectaso.ui.fragments.Actividades2Fragment"
-        android:label="fragment_actividades2"
-        tools:layout="@layout/fragment_actividades2" />
 </navigation>
