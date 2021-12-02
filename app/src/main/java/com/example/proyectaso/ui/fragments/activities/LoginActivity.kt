@@ -46,11 +46,10 @@ class LoginActivity : AppCompatActivity() {
             }else{
                 Toast.makeText(this,"Ingrese los campos",Toast.LENGTH_LONG).show()
             }
-            btnRegister.setOnClickListener {
-                val intent = Intent(this, ChooseActivity::class.java)
-                startActivity(intent)
-            }
-
+        }
+        btnRegister.setOnClickListener {
+            val intent = Intent(this, ChooseActivity::class.java)
+            startActivity(intent)
         }
     }
 
