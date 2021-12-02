@@ -48,30 +48,40 @@ class RegisterAuspActivity : AppCompatActivity() {
 
             val id: UUID = UUID.randomUUID()
 
-            db.collection("auspiciador") //auspiciador es el nombre del campo en firebase
+            if (razonSoc.isNotEmpty()&&nombreAusp.isNotEmpty()&&correoAusp.isNotEmpty()&&telefAusp.isNotEmpty()&&contraAusp.isNotEmpty()) {
 
-                .document(id.toString())
-                .set(nuevoauspiciador)
-                .addOnSuccessListener {
+                db.collection("auspiciador") //auspiciador es el nombre del campo en firebase
 
-                    auth.createUserWithEmailAndPassword(correoAusp, contraAusp)
-                        .addOnCompleteListener(this) { task ->
-                            if (task.isSuccessful) {
-                                // Sign in success, update UI with the signed-in user's information
+                    .document(id.toString())
+                    .set(nuevoauspiciador)
+                    .addOnSuccessListener {
 
-                                Log.d(TAG, "createUserWithEmail:success")
-                                val user = auth.currentUser
-                                updateUI(user)
+                        auth.createUserWithEmailAndPassword(correoAusp, contraAusp)
+                            .addOnCompleteListener(this) { task ->
+                                if (task.isSuccessful) {
+                                    // Sign in success, update UI with the signed-in user's information
+
+                                    Log.d(TAG, "createUserWithEmail:success")
+                                    val user = auth.currentUser
+                                    updateUI(user)
+                                }
                             }
-                        }
 
-                    Toast.makeText(applicationContext,"Se registro correctamente",Toast.LENGTH_LONG).show()
-                    val intent = Intent(this, LoginActivity::class.java)
-                    startActivity(intent)
-                }
-                .addOnFailureListener{
-                    Toast.makeText(applicationContext,"Ocurrio un problema",Toast.LENGTH_LONG).show()
-                }
+                        Toast.makeText(
+                            applicationContext,
+                            "Se registro correctamente",
+                            Toast.LENGTH_LONG
+                        ).show()
+                        val intent = Intent(this, LoginActivity::class.java)
+                        startActivity(intent)
+                    }
+                    .addOnFailureListener {
+                        Toast.makeText(applicationContext, "Ocurrio un problema", Toast.LENGTH_LONG)
+                            .show()
+                    }
+            }else{
+                Toast.makeText(this,"Ingrese los campos",Toast.LENGTH_SHORT).show()
+            }
 
         }
 

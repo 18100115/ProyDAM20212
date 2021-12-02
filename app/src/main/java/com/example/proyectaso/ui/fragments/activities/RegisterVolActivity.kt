@@ -47,6 +47,7 @@ class RegisterVolActivity : AppCompatActivity() {
             val nuevoVol = voluntario(contra, correo, nombre, telefono, usuario)
 
             val id: UUID = UUID.randomUUID()
+            if (usuario.isNotEmpty()&&nombre.isNotEmpty()&&correo.isNotEmpty()&&telefono.isNotEmpty()&&contra.isNotEmpty()) {
 
             db.collection("voluntario") //voluntario es el nombre del campo en firebase
 
@@ -76,6 +77,10 @@ class RegisterVolActivity : AppCompatActivity() {
                     Toast.makeText(applicationContext, "Ocurrio un problema", Toast.LENGTH_LONG)
                         .show()
                 }
+            }
+            else{
+                Toast.makeText(this,"Ingrese los campos",Toast.LENGTH_SHORT).show()
+            }
         }
 
         ibRegresar2.setOnClickListener{
