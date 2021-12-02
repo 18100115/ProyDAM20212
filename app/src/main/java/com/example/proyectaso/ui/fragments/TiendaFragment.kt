@@ -6,7 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.proyectaso.R
+import com.example.proyectaso.ui.fragments.adapter.TiendaAdapter
+import com.example.proyectaso.ui.fragments.model.Producto
 
 
 class TiendaFragment : Fragment() {
@@ -15,13 +19,22 @@ class TiendaFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tienda, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_tienda, container, false)
+        val rvTienda: RecyclerView = view.findViewById(R.id.rvTienda)
+        rvTienda.layoutManager = LinearLayoutManager(requireContext())
+        rvTienda.adapter = TiendaAdapter(listProductoTienda())
+
+        return view
     }
 
-    private fun setupRecyclerView(){
-        //rvTienda.layou
-    }
+    private fun listProductoTienda(): List<Producto>{
+        val lstProducto: ArrayList<Producto> = ArrayList()
+        lstProducto.add(Producto(1,R.drawable.camisa, "Camisa Celeste","COMPRAR"))
+        lstProducto.add(Producto(2,R.drawable.zapatillas, "Zapatillas Rojas","COMPRAR"))
+        lstProducto.add(Producto(3,R.drawable.lentes, "Lentes de sol","COMPRAR"))
+        lstProducto.add(Producto(4,R.drawable.sombrero, "Sombrero PL","COMPRAR"))
 
+        return lstProducto
+    }
 
 }
