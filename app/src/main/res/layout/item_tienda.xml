@@ -32,7 +32,7 @@
     <Button
         android:id="@+id/button"
         android:layout_width="68dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_marginEnd="50dp"
         android:text="bot"
         app:layout_constraintBottom_toBottomOf="parent"
