@@ -10,7 +10,7 @@ class ChooseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choose)
-
+        //alvarito
         val ibEscVol: ImageButton = findViewById(R.id.ibEscVol)
         val ibEscAusp: ImageButton = findViewById(R.id.ibEscAusp)
         val ibRegresar1: ImageButton = findViewById(R.id.ibRegresar1)
