@@ -44,7 +44,7 @@ class RegisterAuspActivity : AppCompatActivity() {
             var contraAusp = etContraAusp.text.toString()
             var terminos = cbTermCondAusp.text.toString()
 
-            val nuevoauspiciador = auspiciador(razonSoc,nombreAusp,correoAusp,telefAusp,contraAusp)
+            val nuevoauspiciador = auspiciador(contraAusp,nombreAusp,telefAusp,razonSoc,correoAusp)
 
             val id: UUID = UUID.randomUUID()
 
@@ -67,11 +67,7 @@ class RegisterAuspActivity : AppCompatActivity() {
                                 }
                             }
 
-                        Toast.makeText(
-                            applicationContext,
-                            "Se registro correctamente",
-                            Toast.LENGTH_LONG
-                        ).show()
+                        Toast.makeText(applicationContext, "Se registro correctamente",Toast.LENGTH_LONG).show()
                         val intent = Intent(this, LoginActivity::class.java)
                         startActivity(intent)
                     }
