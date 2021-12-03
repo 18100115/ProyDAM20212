@@ -10,25 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyectaso">
         <activity
+            android:name=".ui.fragments.activities.EditProfileActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.fragments.activities.Registro_NA_Activity"
             android:exported="true" />
         <activity
-            android:name=".ui.fragments.activities.Reguistro_NA_Activity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.fragments.activities.ListaActividades_Activity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.fragments.Main2Activity"
-            android:exported="true"
-            android:label="@string/title_activity_main2" />
-        <activity
             android:name=".ui.fragments.activities.RegisterVolActivity"
             android:exported="true" />
-        <activity
-            android:name=".ui.fragments.MainActivity2"
-            android:exported="true"
-            android:label="@string/title_activity_main2" />
         <activity
             android:name=".ui.fragments.activities.RegisterAuspActivity"
             android:exported="true" />
