@@ -6,3 +6,4 @@ data class Producto(val id: Int,
                   val image: Int,
                   val producto: String)
 
+

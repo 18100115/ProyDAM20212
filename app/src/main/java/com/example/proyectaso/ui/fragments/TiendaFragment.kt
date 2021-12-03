@@ -24,7 +24,6 @@ class TiendaFragment : Fragment() {
         rvTienda.layoutManager = LinearLayoutManager(requireContext())
         rvTienda.adapter = TiendaAdapter(listProductoTienda())
 
-
         return view
     }
 

@@ -21,7 +21,6 @@ class TiendaAdapter (private var lstProductos: List<Producto>)
         val btnComprar: Button = itemView.findViewById(R.id.btnComprar)
     }
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TiendaAdapter.ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         return ViewHolder(layoutInflater.inflate(R.layout.item_tienda, parent, false))
