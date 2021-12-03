@@ -9,12 +9,19 @@ import com.example.proyectaso.R
 
 class HorarioFragment : Fragment() {
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        initWidgets()
+
         return inflater.inflate(R.layout.fragment_horario, container, false)
+    }
+
+    private fun initWidgets() {
+        TODO("Not yet implemented")
     }
 
 }
