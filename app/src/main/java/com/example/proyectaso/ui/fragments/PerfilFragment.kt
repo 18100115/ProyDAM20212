@@ -2,6 +2,7 @@ package com.example.proyectaso.ui.fragments
 
 import android.os.Bundle
 import android.text.Editable
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import com.example.proyectaso.R
+import com.example.proyectaso.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -34,19 +36,39 @@ class PerfilFragment : Fragment() {
 
         val botonEditar: Button = view.findViewById(R.id.btnPerfilEdit)
 
-        auth = FirebaseAuth.getInstance()
+        auth = Firebase.auth
 
-        val currentUser = auth.currentUser
-        val uid = currentUser!!.uid
+        val user = Firebase.auth.currentUser
+        val uid = user!!.uid //Es importante, no borrar
         val db = Firebase.firestore
 
-        db.collection("voluntario").document(uid).get().addOnSuccessListener {
-            correo.text = (it.get("correo") as Editable?)
-            nombre.text = (it.get("nombre") as Editable?)
-            telefono.text = (it.get("telefono") as Editable?)
+        db.collection("voluntario")
+            .get()
+            .addOnSuccessListener { result ->
+                for (document in result) {
+                    if ("${document.data["correo"]}"=="${user.email}"){
+                        correo.text = "Correo: ${document.data["correo"]}"
+                        nombre.text = "Nombre: ${document.data["nombre"]}"
+                        telefono.text = "Telefono: ${document.data["telefono"]}"
+                        break
+                    }
+                }
+            }
 
-        }
+        db.collection("auspiciador")
+            .get()
+            .addOnSuccessListener { result ->
+                for (document in result) {
+                    if ("${document.data["correo"]}"=="${user.email}"){
+                        correo.text = "Correo: ${document.data["correo"]}"
+                        nombre.text = "Nombre: ${document.data["nombreRep"]}"
+                        telefono.text = "Telefono: ${document.data["telefono"]}"
+                        break
+                    }
+                }
+            }
         return view
 
     }
+
 }
