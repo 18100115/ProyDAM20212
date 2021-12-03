@@ -30,10 +30,10 @@ class TiendaFragment : Fragment() {
 
     private fun listProductoTienda(): List<Producto>{
         val lstProducto: ArrayList<Producto> = ArrayList()
-        lstProducto.add(Producto(1,R.drawable.camisa, "Camisa Celeste","COMPRAR"))
-        lstProducto.add(Producto(2,R.drawable.zapatillas, "Zapatillas Rojas","COMPRAR"))
-        lstProducto.add(Producto(3,R.drawable.lentes, "Lentes de sol","COMPRAR"))
-        lstProducto.add(Producto(4,R.drawable.sombrero, "Sombrero PL","COMPRAR"))
+        //lstProducto.add(Producto(1,R.drawable.camisa, "Camisa Celeste",))
+        //lstProducto.add(Producto(2,R.drawable.zapatillas, "Zapatillas Rojas",))
+        //lstProducto.add(Producto(3,R.drawable.lentes, "Lentes de sol",))
+        //lstProducto.add(Producto(4,R.drawable.sombrero, "Sombrero PL",))
 
         return lstProducto
     }

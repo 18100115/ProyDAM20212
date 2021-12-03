@@ -3,6 +3,7 @@ package com.example.proyectaso.ui.fragments.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -12,10 +13,12 @@ import com.example.proyectaso.ui.fragments.model.Producto
 
 class TiendaAdapter (private var lstProductos: List<Producto>)
     :RecyclerView.Adapter<TiendaAdapter.ViewHolder>(){
+
+
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val ivProducto: ImageView = itemView.findViewById(R.id.ivProducto)
         val tvProducto: TextView = itemView.findViewById(R.id.tvProducto)
-        val tvBtn: TextView = itemView.findViewById(R.id.tvBtn)
+        val btnComprar: Button = itemView.findViewById(R.id.btnComprar)
     }
 
 
@@ -27,7 +30,7 @@ class TiendaAdapter (private var lstProductos: List<Producto>)
     override fun onBindViewHolder(holder: TiendaAdapter.ViewHolder, position: Int) {
         val itemProducto = lstProductos[position]
         holder.tvProducto.text = itemProducto.producto
-        holder.tvBtn.text = itemProducto.boton
+        //holder.btnComprar.text = itemProducto.btnComprar.toString()
         holder.ivProducto.setImageResource(itemProducto.image)
     }
 
