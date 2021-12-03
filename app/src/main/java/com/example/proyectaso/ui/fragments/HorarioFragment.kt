@@ -21,7 +21,7 @@ class HorarioFragment : Fragment() {
     }
 
     private fun initWidgets() {
-        TODO("Not yet implemented")
+
     }
 
 }
