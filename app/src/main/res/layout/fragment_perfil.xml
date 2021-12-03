@@ -9,13 +9,22 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="44dp"
-        app:layout_constraintStart_toEndOf="@+id/tvCorreoPerfil"
+        android:layout_width="126dp"
+        android:layout_height="131dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginBottom="320dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/btnPerfilEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
+        app:srcCompat="@drawable/profile"
+        tools:src="@tools:sample/avatars"
+        tools:visibility="visible" />
 
     <TextView
         android:id="@+id/tvTelefonoPerfil"
@@ -32,8 +41,8 @@
         android:id="@+id/tvCorreoPerfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="58dp"
-        android:layout_marginTop="38dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="48dp"
         android:text="Correo:"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,14 +61,21 @@
 
     <Button
         android:id="@+id/btnPerfilEdit"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:text="Editar"
+        app:layout_constraintBottom_toTopOf="@+id/btnPerfilCerrarSesion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/btnPerfilCerrarSesion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="352dp"
-        android:text="Editar"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="12dp"
+        android:text="Cerrar Sesión"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.27" />
+        app:layout_constraintTop_toBottomOf="@+id/btnPerfilEdit" />
 </androidx.constraintlayout.widget.ConstraintLayout>

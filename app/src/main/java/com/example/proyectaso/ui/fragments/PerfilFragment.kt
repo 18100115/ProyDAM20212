@@ -35,6 +35,7 @@ class PerfilFragment : Fragment() {
 
 
         val botonEditar: Button = view.findViewById(R.id.btnPerfilEdit)
+        val botonCerrarSesion: Button = view.findViewById(R.id.btnPerfilCerrarSesion)
 
         auth = Firebase.auth
 
