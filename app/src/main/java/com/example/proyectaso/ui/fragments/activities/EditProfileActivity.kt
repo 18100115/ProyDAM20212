@@ -11,6 +11,7 @@ import com.example.proyectaso.ui.fragments.MainActivity
 import com.example.proyectaso.ui.fragments.PerfilFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -26,19 +27,26 @@ class EditProfileActivity : AppCompatActivity() {
         val tv4: TextView = findViewById(R.id.tvEditar4)
         val tv5: TextView = findViewById(R.id.tvEditar5)
 
+        val et1: EditText = findViewById(R.id.etEditar1)
+        val et2: EditText = findViewById(R.id.etEditar2)
+        val et3: EditText = findViewById(R.id.etEditar3)
+        val et4: EditText = findViewById(R.id.etEditar4)
+        val et5: EditText = findViewById(R.id.etEditar5)
+
+
         val botonGuardar: Button = findViewById(R.id.btnEditarGuardar)
-        val tipo = 0 //0 Es voluntario, 1 auspiciador
         auth = Firebase.auth
 
         val user = Firebase.auth.currentUser
         val uid = user!!.uid //Es importante, no borrar
         val db = Firebase.firestore
-
+        //SOLO CAMBIA TEXT VIEW
         db.collection("voluntario")
             .get()
             .addOnSuccessListener { result ->
                 for (document in result) {
                     if ("${document.data["correo"]}"=="${user.email}"){
+                        val persona = db.collection("voluntario").document("${document}")
                         tv1.text = "Nombre:"
                         tv2.text = "Usuario:"
                         tv3.text = "Telefono"
@@ -49,12 +57,13 @@ class EditProfileActivity : AppCompatActivity() {
                     }
                 }
             }
-
+        //SOLO CAMBIA TEXT VIEW
         db.collection("auspiciador")
             .get()
             .addOnSuccessListener { result ->
                 for (document in result) {
                     if ("${document.data["correo"]}"=="${user.email}"){
+                        val persona = db.collection("auspiciador").document("${document}")
                         tv1.text = "Nombre Representante:"
                         tv2.text = "Razón social:"
                         tv3.text = "Telefono"
@@ -65,10 +74,43 @@ class EditProfileActivity : AppCompatActivity() {
                 }
             }
 
+
+        //UNA VEZ GUARDADO
         botonGuardar.setOnClickListener {
 
+            db.collection("auspiciador")
+                .get()
+                .addOnSuccessListener { result ->
+                    for (document in result) {
+                        if ("${document.data["correo"]}"=="${user.email}"){
+                            val persona = db.collection("auspiciador").document("${document}")
+                            persona.update("nombreRep",et1.text)
+                            persona.update("razonSocial",et2.text)
+                            persona.update("telefono",et3.text)
+                            persona.update("correo",et4.text)
+                            persona.update("contraseña",et5.text)
 
+                            break
+                        }
+                    }
+                }
 
+            db.collection("voluntario")
+                .get()
+                .addOnSuccessListener { result ->
+                    for (document in result) {
+                        if ("${document.data["correo"]}"=="${user.email}"){
+                            val persona = db.collection("voluntario").document("${document}")
+                            persona.update("nombre",et1.text)
+                            persona.update("usuario",et2.text)
+                            persona.update("telefono",et3.text)
+                            persona.update("correo",et4.text)
+                            persona.update("contraseña",et5.text)
+
+                            break
+                        }
+                    }
+                }
 
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)

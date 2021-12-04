@@ -36,6 +36,7 @@ class PerfilFragment : Fragment() {
         val correo: TextView = view.findViewById(R.id.tvCorreoPerfil)
         val nombre: TextView = view.findViewById(R.id.tvNombrePerfil)
         val telefono: TextView = view.findViewById(R.id.tvTelefonoPerfil)
+        val tv4: TextView = view.findViewById(R.id.tv4)
 
 
         val botonEditar: Button = view.findViewById(R.id.btnPerfilEdit)
@@ -55,6 +56,8 @@ class PerfilFragment : Fragment() {
                         correo.text = "Correo: ${document.data["correo"]}"
                         nombre.text = "Nombre: ${document.data["nombre"]}"
                         telefono.text = "Telefono: ${document.data["telefono"]}"
+                        tv4.text = "Usuario: ${document.data["usuario"]}"
+
                         break
                     }
                 }
@@ -68,6 +71,7 @@ class PerfilFragment : Fragment() {
                         correo.text = "Correo: ${document.data["correo"]}"
                         nombre.text = "Nombre: ${document.data["nombreRep"]}"
                         telefono.text = "Telefono: ${document.data["telefono"]}"
+                        tv4.text = "Razón Social: ${document.data["razonSocial"]}"
                         break
                     }
                 }
