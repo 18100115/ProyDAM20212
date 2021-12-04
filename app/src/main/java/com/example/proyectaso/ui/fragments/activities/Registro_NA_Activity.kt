@@ -27,32 +27,42 @@ class Registro_NA_Activity : AppCompatActivity() {
         val db = FirebaseFirestore.getInstance()
 
 
-        btnRegistroNA.setOnClickListener{
-            var nombre = txtNombreEvent.text.toString()
-            var descripcion = txtDescrip.text.toString()
-            var ubicacion = txtUbic.text.toString()
-            var recompensa = txtRecom.text.toString()
-            var num_voluntarios = txtNvol.text.toString()
-            var fecha_hora = txtFecha.text.toString()
-
-            val nuevoActividad = Actividad(nombre,descripcion,ubicacion,recompensa,num_voluntarios,fecha_hora)
-            val id:UUID = UUID.randomUUID()
-
-            db.collection("actividad")
-                .document(id.toString())
-                .set(nuevoActividad)
-                .addOnSuccessListener {
-                    Toast.makeText(this, "Registro Completado", Toast.LENGTH_LONG).show()
-                    val intent = Intent(this, ActividadesFragment::class.java)
-                    startActivity(intent)
-                }.addOnFailureListener {
-                    Toast.makeText(this, "Ocurrió un problema", Toast.LENGTH_LONG).show()
-                    val intent = Intent(this, ActividadesFragment::class.java)
-                    startActivity(intent)
-                }
 
 
-        }
+            btnRegistroNA.setOnClickListener {
+                var nombre = txtNombreEvent.text.toString()
+                var descripcion = txtDescrip.text.toString()
+                var ubicacion = txtUbic.text.toString()
+                var recompensa = txtRecom.text.toString()
+                var num_voluntarios = txtNvol.text.toString()
+                var fecha_hora = txtFecha.text.toString()
+
+                val nuevoActividad = Actividad(
+                    nombre,
+                    descripcion,
+                    ubicacion,
+                    recompensa,
+                    num_voluntarios,
+                    fecha_hora
+                )
+                val id: UUID = UUID.randomUUID()
+
+                db.collection("actividad")
+                    .document(id.toString())
+                    .set(nuevoActividad)
+                    .addOnSuccessListener {
+                        Toast.makeText(this, "Registro Completado", Toast.LENGTH_LONG).show()
+                        val intent = Intent(this, ActividadesFragment::class.java)
+                        startActivity(intent)
+                    }.addOnFailureListener {
+                        Toast.makeText(this, "Ocurrió un problema", Toast.LENGTH_LONG).show()
+                        val intent = Intent(this, ActividadesFragment::class.java)
+                        startActivity(intent)
+                    }
+
+
+            }
+
 
 
     }

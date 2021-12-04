@@ -33,6 +33,7 @@ class ActividadesFragment : Fragment() {
         val lstActividad: ArrayList<Actividad> = ArrayList()
         val rvActividad: RecyclerView = view.findViewById(R.id.rcv_Lista_Actividades)
 
+
         db.collection("actividad")
             .addSnapshotListener{ snapshots,e->
                 if(e!=null)

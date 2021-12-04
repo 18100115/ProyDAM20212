@@ -15,6 +15,7 @@ class ActividadAdapter (private var lstActividad: List<Actividad>):RecyclerView.
         val tvNombre: TextView = itemView.findViewById(R.id.tvNombre)
         val tvDescripcion: TextView = itemView.findViewById(R.id.tvDescripcion)
         val tvMonedas : TextView = itemView.findViewById(R.id.tvMonedas)
+        val tvUbicacion : TextView = itemView.findViewById(R.id.tvUbica)
 
     }
 
@@ -28,6 +29,7 @@ class ActividadAdapter (private var lstActividad: List<Actividad>):RecyclerView.
         holder.tvNombre.text = itemActividad.nombre
         holder.tvDescripcion.text = itemActividad.descripcion
         holder.tvMonedas.text = itemActividad.recompensa
+        holder.tvUbicacion.text = itemActividad.ubicacion
     }
 
     override fun getItemCount(): Int {
