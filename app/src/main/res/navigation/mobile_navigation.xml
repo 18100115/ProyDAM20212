@@ -24,4 +24,9 @@
         android:name="com.example.proyectaso.ui.fragments.ProductosFragment"
         android:label="fragment_productos"
         tools:layout="@layout/fragment_productos" />
+    <fragment
+        android:id="@+id/navhorario"
+        android:name="com.example.proyectaso.ui.fragments.HorarioFragment"
+        android:label="fragment_horario"
+        tools:layout="@layout/fragment_horario" />
 </navigation>
