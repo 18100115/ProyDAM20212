@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/ivProducto"
+        android:id="@+id/ivProductaso"
         android:layout_width="93dp"
         android:layout_height="97dp"
         android:layout_marginStart="44dp"
@@ -28,7 +28,7 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnComprar"
-        app:layout_constraintStart_toEndOf="@+id/ivProducto"
+        app:layout_constraintStart_toEndOf="@+id/ivProductaso"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button

@@ -3,7 +3,6 @@ package com.example.proyectaso.ui.fragments.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -16,7 +15,7 @@ class TiendaAdapter (private var lstProductos: List<Producto>)
 
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        val ivProducto: ImageView = itemView.findViewById(R.id.ivProducto)
+        val ivProducto: ImageView = itemView.findViewById(R.id.ivProductaso)
         val tvProducto: TextView = itemView.findViewById(R.id.tvProducto)
         val btnComprar: Button = itemView.findViewById(R.id.btnComprar)
     }

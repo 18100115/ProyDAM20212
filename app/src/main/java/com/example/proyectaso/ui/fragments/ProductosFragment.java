@@ -29,11 +29,11 @@ public class ProductosFragment extends Fragment {
         init();
 
         elements = new ArrayList<>();
-        elements.add(new ListElement(R.drawable.camisa, "Pedro", "México", "Soltero", "dssad"));
-        elements.add(new ListElement(R.drawable.sombrero, "Luis", "Peru", "Activo", "dssad"));
-        elements.add(new ListElement(R.drawable.lentes,"Ricard", "Argentina", "Casado", "dssad"));
-        elements.add(new ListElement(R.drawable.zapatillas, "Alvaro", "Colombia", "Divorciado", "dssad"));
-        elements.add(new ListElement(R.drawable.sombrero, "Gustavo", "Venezuela", "Viudo", "dssad"));
+        elements.add(new ListElement(R.drawable.sombrero, "Diseño alto y elegante", "Sombrero PL", "Modelo en diseño crema", "500"));
+        elements.add(new ListElement(R.drawable.lentes, "Colores: Rojo y azul", "Lentes de sol", "Con protección UVH", "75"));
+        elements.add(new ListElement(R.drawable.camisa,"Tallas: M, L y XL", "Camisa celeste", "Bordado de seda", "250"));
+        elements.add(new ListElement(R.drawable.pantalones, "Tallas: 28-38", "Pantalones marrones", "Bolsillos inferiores", "185"));
+        elements.add(new ListElement(R.drawable.zapatillas, "Estilo deportivas y casual", "Zapatillas negrasx", "Zapatillas negras", "150"));
 
         ListAdapter listAdapter = new ListAdapter(elements, getActivity().getApplication(), new ListAdapter.OnItemClickListener() {
             @Override
