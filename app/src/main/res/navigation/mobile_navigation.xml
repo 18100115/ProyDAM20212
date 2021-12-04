@@ -7,12 +7,12 @@
     <fragment
         android:id="@+id/navactividades"
         android:name="com.example.proyectaso.ui.fragments.ActividadesFragment"
-        android:label="fragment_actividades"
+        android:label="Actividades"
         tools:layout="@layout/fragment_actividades" />
     <fragment
         android:id="@+id/navperfil"
         android:name="com.example.proyectaso.ui.fragments.PerfilFragment"
-        android:label="fragment_perfil"
+        android:label="Perfil"
         tools:layout="@layout/fragment_perfil" />
     <fragment
         android:id="@+id/navtienda"
@@ -22,7 +22,7 @@
     <fragment
         android:id="@+id/navproductos"
         android:name="com.example.proyectaso.ui.fragments.ProductosFragment"
-        android:label="fragment_productos"
+        android:label="Tienda"
         tools:layout="@layout/fragment_productos" />
     <fragment
         android:id="@+id/navhorario"
