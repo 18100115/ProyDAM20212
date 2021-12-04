@@ -7,36 +7,59 @@
 
     <TextView
         android:id="@+id/tvNombre"
-        android:layout_width="314dp"
-        android:layout_height="48dp"
+        android:layout_width="272dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:background="#648ECC"
         android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="43dp"
-        android:layout_height="42dp"
+        android:layout_width="24dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMonedas"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toEndOf="@+id/tvUbica"
+        app:layout_constraintTop_toTopOf="@+id/tvMonedas"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/moneda"
-        tools:layout_editor_absoluteY="66dp"
         tools:src="@tools:sample/avatars"
         tools:visibility="visible" />
 
     <TextView
         android:id="@+id/tvDescripcion"
-        android:layout_width="314dp"
-        android:layout_height="60dp"
+        android:layout_width="271dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombre" />
+
+    <TextView
+        android:id="@+id/tvUbica"
+        android:layout_width="272dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvNombre" />
 
     <TextView
         android:id="@+id/tvMonedas"
-        android:layout_width="46dp"
-        android:layout_height="43dp"
+        android:layout_width="37dp"
+        android:layout_height="28dp"
         android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDescripcion"
         app:layout_constraintEnd_toStartOf="@+id/imageView2"
-        tools:layout_editor_absoluteY="66dp" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDescripcion"
+        app:layout_constraintVertical_bias="0.72" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
