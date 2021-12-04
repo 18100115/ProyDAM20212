@@ -12,9 +12,9 @@
         android:title="@string/title_tienda" />
 
     <item
-        android:id="@+id/navhorario"
+        android:id="@+id/navproductos"
         android:icon="@drawable/calendar"
-        android:title="@string/title_horario" />
+        android:title="@string/title_productos"/>
 
     <item
         android:id="@+id/navperfil"

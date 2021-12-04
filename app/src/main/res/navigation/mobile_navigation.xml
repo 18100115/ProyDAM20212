@@ -10,11 +10,6 @@
         android:label="fragment_actividades"
         tools:layout="@layout/fragment_actividades" />
     <fragment
-        android:id="@+id/navhorario"
-        android:name="com.example.proyectaso.ui.fragments.HorarioFragment"
-        android:label="fragment_horario"
-        tools:layout="@layout/fragment_horario" />
-    <fragment
         android:id="@+id/navperfil"
         android:name="com.example.proyectaso.ui.fragments.PerfilFragment"
         android:label="fragment_perfil"
@@ -23,5 +18,10 @@
         android:id="@+id/navtienda"
         android:name="com.example.proyectaso.ui.fragments.TiendaFragment"
         android:label="fragment_tienda"
-        tools:layout="@layout/fragment_tienda" />
+        tools:layout="@layout/fragment_tienda"/>
+    <fragment
+        android:id="@+id/navproductos"
+        android:name="com.example.proyectaso.ui.fragments.ProductosFragment"
+        android:label="fragment_productos"
+        tools:layout="@layout/fragment_productos" />
 </navigation>
