@@ -16,7 +16,7 @@ class Registro_NA_Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro_na)
-
+        // Codigo
         val txtNombreEvent: EditText = findViewById(R.id.edt_nombreE)
         val txtDescrip : EditText = findViewById(R.id.edt_desc)
         val txtUbic: EditText = findViewById(R.id.edt_ubic)

@@ -1,5 +1,6 @@
 package com.example.proyectaso.ui.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.util.Log
@@ -12,6 +13,9 @@ import android.widget.EditText
 import android.widget.TextView
 import com.example.proyectaso.R
 import com.example.proyectaso.databinding.ActivityMainBinding
+import com.example.proyectaso.ui.fragments.activities.ChooseActivity
+import com.example.proyectaso.ui.fragments.activities.EditProfileActivity
+import com.example.proyectaso.ui.fragments.activities.LoginActivity
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -68,8 +72,21 @@ class PerfilFragment : Fragment() {
                     }
                 }
             }
+
+        botonEditar.setOnClickListener {
+            val intent = Intent(activity, EditProfileActivity::class.java)
+            startActivity(intent)
+        }
+
+        botonCerrarSesion.setOnClickListener{
+            auth.signOut()
+            val intent = Intent(activity, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
         return view
 
     }
+
 
 }
