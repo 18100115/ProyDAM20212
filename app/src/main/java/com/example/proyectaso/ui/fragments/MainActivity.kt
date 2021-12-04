@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                     R.id.navactividades, R.id.navtienda, R.id.navproductos, R.id.navperfil
-                    //Se quitó R.id.navhorario
+                    //Se quitó R.id.navhorario 
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

@@ -14,7 +14,7 @@
     <item
         android:id="@+id/navproductos"
         android:icon="@drawable/calendar"
-        android:title="@string/title_productos" />
+        android:title="@string/title_productos"/>
 
     <item
         android:id="@+id/navperfil"

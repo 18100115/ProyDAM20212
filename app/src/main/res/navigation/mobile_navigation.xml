@@ -18,7 +18,7 @@
         android:id="@+id/navtienda"
         android:name="com.example.proyectaso.ui.fragments.TiendaFragment"
         android:label="fragment_tienda"
-        tools:layout="@layout/fragment_tienda" />
+        tools:layout="@layout/fragment_tienda"/>
     <fragment
         android:id="@+id/navproductos"
         android:name="com.example.proyectaso.ui.fragments.ProductosFragment"

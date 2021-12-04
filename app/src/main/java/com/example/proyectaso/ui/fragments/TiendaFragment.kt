@@ -36,5 +36,4 @@ class TiendaFragment : Fragment() {
 
         return lstProducto
     }
-
 }
