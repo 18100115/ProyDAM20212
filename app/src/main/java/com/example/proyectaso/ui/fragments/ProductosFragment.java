@@ -10,7 +10,11 @@ import android.view.ViewGroup;
 
 import com.example.proyectaso.R;
 
+import java.util.List;
+
 public class ProductosFragment extends Fragment {
+
+    List<ListElement> elements;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
